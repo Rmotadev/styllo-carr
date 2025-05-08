@@ -23,7 +23,7 @@ ul {
     list-style: none;
 }
 
-/* Header e Navegação */
+
 header {
     background-color: #1a1a1a;
     padding: 0.5rem 0;
@@ -44,7 +44,7 @@ nav {
 }
 
 nav .logo #header-logo {
-    max-height: 150px; /* Aumentado mais um pouco */
+    max-height: 150px;
     width: auto;
     display: block;
 }
@@ -82,7 +82,7 @@ nav ul li a:hover {
 
 /* Seções */
 main {
-    padding-top: 120px; /* Ajustado para nova altura do header com logo maior */
+    padding-top: 120px;
 }
 
 section {
@@ -173,7 +173,7 @@ section h2 {
     font-weight: bold;
     color: #ffffff;
     margin-top: auto; 
-    /* text-align: right; Removido para centralizar */
+   
 }
 
 /* Seção Galeria */
@@ -194,7 +194,7 @@ section h2 {
     border: 2px solid #ff0000;
 }
 
-/* Seção Contato */
+
 #contato {
     background-color: #000000;
     text-align: center;
@@ -204,7 +204,7 @@ section h2 {
     margin-bottom: 0.5rem;
 }
 
-/* Footer */
+
 footer {
     background-color: #1a1a1a;
     color: #aaaaaa;
@@ -231,7 +231,7 @@ footer {
 }
 
 
-/* Responsividade Básica */
+
 @media (max-width: 768px) {
     header {
         padding: 0.5rem 0;
@@ -248,7 +248,7 @@ footer {
     }
 
     nav .logo #header-logo {
-        max-height: 40px;
+        max-height: 100px;
     }
 
     main {
@@ -282,18 +282,18 @@ footer {
         font-size: 2rem;
     }
     .servicos-container {
-        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+        grid-template-columns: 1fr; 
     }
 }
 
 
-/* Estilos para header.scrolled */
+
 header.scrolled {
     background-color: #111111; 
     box-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
-/* Estilos para .menu-toggle.active (animação do hamburguer para X) */
+
 .menu-toggle.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
 }
@@ -305,7 +305,7 @@ header.scrolled {
 }
 
 
-/* Estilos para o Modal de Orçamento */
+
 .modal {
     display: none;
     position: fixed;
@@ -398,7 +398,7 @@ header.scrolled {
     margin-top: 1rem;
 }
 
-/* Ajustes de responsividade para o modal */
+
 @media (max-width: 600px) {
     .modal-content {
         width: 95%;

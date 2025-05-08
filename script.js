@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Smooth scroll for anchor links
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -29,14 +29,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Animações ao rolar (exemplo simples de fade-in para seções)
     const sections = document.querySelectorAll('main section');
     const revealSection = (entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = 1;
                 entry.target.style.transform = 'translateY(0)';
-                // observer.unobserve(entry.target); // Descomente para animar apenas uma vez
+            
             }
         });
     };
@@ -54,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         sectionObserver.observe(section);
     });
 
-    // Controle do Modal de Orçamento
+    
     const budgetModal = document.getElementById('budgetModal');
     const openBudgetModalButton = document.getElementById('openBudgetModal');
     const closeBudgetModalButton = document.getElementById('closeBudgetModal');
@@ -72,17 +71,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Fechar modal clicando fora
+    
     window.addEventListener('click', (event) => {
         if (event.target == budgetModal) {
             budgetModal.style.display = 'none';
         }
     });
 
-    // Manipulação do formulário de orçamento
+    
     if (budgetForm) {
         budgetForm.addEventListener('submit', (e) => {
-            e.preventDefault(); // Impede o envio padrão do formulário
+            e.preventDefault(); 
             const nome = document.getElementById('nome').value;
             const contato = document.getElementById('contato-form').value;
             const servico = document.getElementById('servico-desejado').value;
@@ -93,21 +92,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            // Aqui você pode adicionar a lógica para enviar os dados do formulário
-            // Por exemplo, usando fetch() para uma API, ou integrando com um serviço de email.
-            // Por enquanto, vamos apenas mostrar um alerta com os dados.
             alert(`Orçamento Solicitado:\nNome: ${nome}\nContato: ${contato}\nServiço: ${servico}\nMensagem: ${mensagem || 'Nenhuma'}`);
             
-            budgetModal.style.display = 'none'; // Fecha o modal após o envio (simulado)
-            budgetForm.reset(); // Limpa o formulário
+            budgetModal.style.display = 'none'; 
+            budgetForm.reset(); 
         });
     }
 });
 
-// Adicionar classe ao header ao rolar a página
+
 window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
-    if (header) { // Verifica se o header existe
+    if (header) { 
         if (window.scrollY > 50) {
             header.classList.add('scrolled');
         } else {
